@@ -41,9 +41,9 @@ retains the earlier private Sites preview identity; Vercel does not use it.
 
 - The app preview is illustrative. Its two controls work independently and do not request microphone access, record, or process audio.
 - Product details, setup instructions, compatibility, and license language are based on the desktop app’s README and source.
-- Downloads are pinned to `v0.1.0-beta.3`. Update the release label, three package links, and release-notes link in `index.html` together when a new validated release is ready.
+- Downloads are pinned to `v0.1.0-beta.4`. Update the release label, three package links, matching source and checksum links, and release-notes link in `index.html` together when a new validated release is ready.
 - The app repository and published releases are public. The beta installers remain experimental.
-- Current app source is licensed under GNU GPLv3 only (`GPL-3.0-only`). The pinned beta.3 installers predate the licensing transition and retain their bundled terms; the download section and FAQ distinguish them from current source.
+- App source and beta.4 downloads are licensed under GNU GPLv3 only (`GPL-3.0-only`). Matching source and checksums are linked beside the installers. Releases before beta.4 retain their original bundled terms.
 - The original app icon and SVG illustrations come from the first-party `OpenKrisp/OpenKrisp` desktop project. No fonts, trackers, or assets load from third-party servers.
 
 ## Design
