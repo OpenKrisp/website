@@ -58,7 +58,11 @@ p { color: var(--muted); line-height: 1.65; }
 h1 { margin-top: 24px; font-size: clamp(48px, 6.2vw, 80px); line-height: 1.04; font-weight: 600; letter-spacing: -4px; }
 .hero-description { font-size: 19px; line-height: 1.6; margin-top: 26px; }
 .hero-actions { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 30px; }
-.app-preview { max-width: 1016px; margin: 66px auto 0; text-align: left; border: 1px solid #3a574c; border-radius: 15px; overflow: hidden; background: var(--background); box-shadow: 0 24px 70px -24px #0009; }
+.hero-assurances { display: flex; align-items: center; justify-content: center; gap: 26px; margin-top: 21px; }
+.hero-assurances a { display: inline-flex; align-items: center; gap: 7px; color: var(--accent); font-size: 12px; }
+.hero-assurances a:hover { color: var(--text); }
+.hero-assurances .icon { width: 16px; height: 16px; }
+.app-preview { max-width: 1016px; margin: 48px auto 0; text-align: left; border: 1px solid #3a574c; border-radius: 15px; overflow: hidden; background: var(--background); box-shadow: 0 24px 70px -24px #0009; }
 .window-chrome { display: flex; align-items: center; justify-content: space-between; height: 36px; padding-inline: 15px; border-bottom: 1px solid #243a31; background: #11221b; color: #a8bbb5; font-size: 10px; }
 .window-controls { display: flex; gap: 6px; width: 100px; }
 .window-controls i { display: block; width: 9px; height: 9px; background: #3d574a; border-radius: 50%; }
@@ -112,7 +116,30 @@ h1 { margin-top: 24px; font-size: clamp(48px, 6.2vw, 80px); line-height: 1.04; f
 .is-off .flow-arrow { color: #6b8d7d; }
 .is-off .call-setup { border-left-color: var(--line); }
 .preview-caption { margin-top: 19px; font-size: 11px; color: #8fa69d; }
-.benefits { padding-top: 125px; padding-bottom: 110px; }
+.privacy-section { margin-top: 100px; padding: 42px 42px 0; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+.privacy-layout { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 64px; }
+.privacy-icon { width: 28px; height: 30px; margin-bottom: 20px; color: var(--accent); }
+.privacy-copy > p { max-width: 47ch; margin-top: 19px; font-size: 15px; }
+.privacy-copy .privacy-scope { font-size: 12px; margin-top: 14px; }
+.privacy-device { padding: 23px; border: 1px dashed #52756a; border-radius: 15px; background: var(--background); text-align: center; }
+.privacy-device-heading { display: flex; align-items: center; justify-content: center; gap: 7px; color: var(--accent); font-size: 12px; }
+.privacy-device-heading .icon { width: 15px; height: 17px; }
+.privacy-audio-path { display: flex; align-items: center; justify-content: center; gap: 13px; margin: 28px 0 24px; }
+.privacy-endpoint { display: grid; place-items: center; width: 44px; height: 48px; flex: 0 0 auto; color: var(--muted); }
+.privacy-endpoint .icon { width: 27px; height: 30px; }
+.privacy-processor { display: grid; place-items: center; width: 66px; height: 66px; border: 1px solid #497c64; border-radius: 17px; background: var(--accent-soft); flex: 0 0 auto; }
+.privacy-path-arrow { width: 24px; color: #6b8d7d; }
+.privacy-device > strong { font-size: 15px; font-weight: 550; }
+.privacy-device > p { margin-top: 9px; font-size: 12px; }
+.source-section { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 37px; padding: 30px 0; border-top: 1px solid var(--line); }
+.source-copy { display: flex; align-items: flex-start; gap: 17px; }
+.source-icon { width: 24px; height: 24px; margin-top: 3px; color: var(--accent); }
+.source-copy h2 { font-size: 24px; letter-spacing: -.6px; }
+.source-copy p { margin-top: 11px; font-size: 13px; max-width: 65ch; }
+.source-copy .source-terms { margin-top: 9px; font-size: 11px; }
+.source-terms a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.source-section > .button { flex: 0 0 auto; font-size: 13px; min-height: 46px; padding: 12px 17px; }
+.benefits { padding-top: 100px; padding-bottom: 110px; }
 .section-heading { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: end; }
 h2 { font-size: 40px; font-weight: 550; line-height: 1.18; letter-spacing: -1.4px; }
 .section-heading > p { max-width: 430px; font-size: 16px; padding-bottom: 2px; }
@@ -200,6 +227,12 @@ dialog > .button { margin-top: 24px; font-size: 13px; min-height: 44px; }
   .microphone-flow li > span { font-size: 8px; }
   .microphone-flow img { height: 76px; }
   .flow-arrow { top: 33px; }
+  .privacy-section { padding: 32px 32px 0; }
+  .privacy-layout { gap: 35px; }
+  .privacy-copy h2 { font-size: 34px; }
+  .privacy-device { padding: 20px 12px; }
+  .privacy-audio-path { gap: 6px; }
+  .source-section { gap: 25px; }
   .section-heading { gap: 45px; }
   .benefit-grid { gap: 30px; }
   .setup-layout { gap: 65px; }
@@ -222,6 +255,8 @@ dialog > .button { margin-top: 24px; font-size: 13px; min-height: 44px; }
   .hero-actions { margin-top: 25px; }
   .hero-actions .button { font-size: 12px; padding: 13px 16px; min-height: 46px; gap: 8px; }
   .hero-actions .icon { width: 17px; height: 17px; }
+  .hero-assurances { gap: 18px; margin-top: 18px; }
+  .hero-assurances a { font-size: 11px; }
   .app-preview { margin-top: 44px; max-width: 510px; border-radius: 12px; }
   .desktop-app { padding: 0 20px 16px; }
   .audio-workspace { grid-template-columns: minmax(0, 1fr); }
@@ -237,6 +272,18 @@ dialog > .button { margin-top: 24px; font-size: 13px; min-height: 44px; }
   .call-setup { padding: 12px; }
   .app-footer { font-size: 9px; }
   .preview-caption { max-width: 36ch; margin-inline: auto; line-height: 1.6; font-size: 10px; }
+  .privacy-section { margin-top: 65px; padding: 27px 24px 0; border-radius: 16px; }
+  .privacy-layout { grid-template-columns: 1fr; gap: 28px; }
+  .privacy-copy h2 { font-size: 30px; }
+  .privacy-copy > p { font-size: 14px; }
+  .privacy-copy .privacy-scope { font-size: 11px; }
+  .privacy-device { padding: 23px 12px; }
+  .privacy-audio-path { gap: 13px; }
+  .source-section { flex-direction: column; align-items: flex-start; gap: 22px; margin-top: 28px; padding-block: 26px; }
+  .source-copy { gap: 12px; }
+  .source-copy h2 { font-size: 22px; }
+  .source-copy p { font-size: 12px; }
+  .source-section > .button { width: 100%; }
   .benefits { padding-top: 80px; padding-bottom: 65px; }
   .section-heading { grid-template-columns: 1fr; gap: 20px; }
   h2 { font-size: 34px; letter-spacing: -1.2px; }
@@ -281,6 +328,12 @@ dialog > .button { margin-top: 24px; font-size: 13px; min-height: 44px; }
   .hero-description { font-size: 14px; }
   .hero-actions { gap: 2px; }
   .hero-actions .button { padding-inline: 11px; font-size: 11px; }
+  .hero-assurances { gap: 13px; }
+  .hero-assurances a { font-size: 10px; gap: 5px; }
+  .hero-assurances .icon { width: 14px; height: 14px; }
+  .privacy-section { padding-inline: 18px; }
+  .privacy-copy h2 { font-size: 27px; }
+  .privacy-audio-path { gap: 5px; }
   .desktop-app { padding-inline: 12px; }
   .audio-panel { padding: 15px 12px; }
   .microphone-flow img { height: 75px; }
