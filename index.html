@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08110f">
+    <meta name="description" content="Reduce background noise on both sides of your calls. OpenKrisp cleans your microphone and incoming audio, privately on your computer. Experimental beta for macOS and Linux.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="OpenKrisp — Let the conversation come through">
+    <meta property="og:description" content="Less background noise on both sides of your calls. A private, local desktop app for macOS and Linux.">
+    <meta property="og:url" content="https://openkrisp-website.pinkrain16.chatgpt.site">
+    <meta property="og:image" content="https://openkrisp-website.pinkrain16.chatgpt.site/assets/app-icon.png">
+    <title>OpenKrisp — Let the conversation come through</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"/></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.86c-2.78.6-3.37-1.18-3.37-1.18-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.83c.85 0 1.71.12 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24"><rect x="8" y="3" width="8" height="12" rx="4"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3M9 22h6"/></symbol>
+      <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M4 14v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="12" width="4" height="8" rx="2"/><rect x="17" y="12" width="4" height="8" rx="2"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4"/></symbol>
+      <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-1 .7-1.7 1.1-1.7 2.7M12 17h.01"/></symbol>
+      <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M16.7 12.8c0-2.1 1.7-3.1 1.8-3.2-1-1.5-2.5-1.7-3.1-1.7-1.3-.1-2.5.8-3.1.8-.7 0-1.7-.8-2.7-.7-1.4 0-2.7.8-3.4 2.1-1.5 2.5-.4 6.3 1.1 8.3.7 1 1.5 2.1 2.6 2 1 0 1.5-.6 2.8-.6 1.3 0 1.7.6 2.8.6s1.8-1 2.5-2c.8-1.2 1.1-2.3 1.1-2.4-.1 0-2.4-.9-2.4-3.2ZM14.6 6.5c.6-.8 1-1.8.9-2.8-.9 0-2 .6-2.7 1.4-.6.6-1.1 1.7-.9 2.7 1 .1 2-.5 2.7-1.3Z"/></symbol>
+      <symbol id="i-linux" viewBox="0 0 24 24"><path d="M8 10V7a4 4 0 0 1 8 0v3c0 2 3 4 3 7 0 2-3 3-7 3s-7-1-7-3c0-3 3-5 3-7Z"/><path d="m10 10 2 2 2-2M9.5 7.5h.01m5 0h.01M5 21l3-3m11 3-3-3"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    </svg>
+
+    <header class="site-header wrap">
+      <a class="wordmark" href="#" aria-label="OpenKrisp home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>OpenKrisp</a>
+      <nav aria-label="Main navigation">
+        <a class="nav-link" href="#how-it-works">How it works</a>
+        <a class="nav-link" href="#why-openkrisp">Why OpenKrisp</a>
+        <a class="nav-github" href="https://github.com/OpenKrisp/OpenKrisp" aria-label="OpenKrisp on GitHub"><svg class="icon"><use href="#i-github"/></svg></a>
+        <a class="button button-small button-outline" href="#download">Get the beta<svg class="icon"><use href="#i-download"/></svg></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <a class="beta-badge" href="#download"><span class="status-dot"></span>Experimental beta for macOS & Linux<svg class="icon"><use href="#i-arrow"/></svg></a>
+        <h1 id="hero-title">Let the conversation<br>come through.</h1>
+        <p class="hero-description">Less background noise. On both sides of the call.<br class="desktop-break"> OpenKrisp cleans your audio, right on your computer.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#download"><svg class="icon"><use href="#i-download"/></svg>Get OpenKrisp</a>
+          <a class="button button-text" href="https://github.com/OpenKrisp/OpenKrisp"><svg class="icon"><use href="#i-github"/></svg>Explore the source</a>
+        </div>
+
+        <div class="app-preview" aria-label="Interactive preview of the OpenKrisp desktop app">
+          <div class="window-chrome" aria-hidden="true"><span class="window-controls"><i></i><i></i><i></i></span><span>OpenKrisp</span><span class="preview-tag">App preview</span></div>
+          <div class="desktop-app">
+            <div class="app-header"><div class="wordmark"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>OpenKrisp</div><button class="quiet-button" id="preview-help"><svg class="icon"><use href="#i-help"/></svg>Help</button></div>
+            <div class="audio-workspace">
+              <section class="audio-panel" data-route="microphone" aria-labelledby="preview-mic-title">
+                <div class="audio-panel-heading"><h2 id="preview-mic-title">Your microphone</h2><span class="route-status is-on" role="status"><span class="status-dot"></span><span data-status-text>On</span></span></div>
+                <p class="audio-panel-description">Reduce background noise around you.</p>
+                <ol class="microphone-flow" aria-label="Microphone audio flow">
+                  <li><img src="./assets/microphone.svg" alt="" width="160" height="112"><svg class="flow-arrow icon"><use href="#i-arrow"/></svg><strong>Your microphone</strong><span>Voice + room sound</span></li>
+                  <li><img src="./assets/filter.svg" alt="" width="160" height="112" data-filter-image><svg class="flow-arrow icon"><use href="#i-arrow"/></svg><strong>OpenKrisp</strong><span data-processing-text>Reducing the noise</span></li>
+                  <li><img src="./assets/call.svg" alt="" width="160" height="112"><strong>OpenKrisp microphone</strong><span>For your call app</span></li>
+                </ol>
+                <div class="preview-device"><span>Microphone</span><span class="device-display">MacBook microphone<svg class="icon"><use href="#i-chevron"/></svg></span></div>
+                <div class="audio-level" aria-hidden="true"><span>Input level</span><span class="level-track"><span></span></span></div>
+                <button class="transport is-on" aria-pressed="true" aria-label="Turn off microphone noise reduction in the preview"><span class="transport-icon" aria-hidden="true"></span><span data-button-text>Turn off OpenKrisp</span></button>
+                <div class="call-setup"><svg class="icon"><use href="#i-mic"/></svg><div><p>In your call app, choose this microphone:</p><strong>OpenKrisp Microphone</strong><details><summary>How to connect</summary><p>Open your call app’s audio settings and select OpenKrisp Microphone as the microphone. Keep OpenKrisp running during the call.</p></details></div></div>
+              </section>
+              <section class="audio-panel" data-route="speakers" aria-labelledby="preview-speakers-title">
+                <div class="audio-panel-heading"><h2 id="preview-speakers-title">Your speakers</h2><span class="route-status is-on" role="status"><span class="status-dot"></span><span data-status-text>On</span></span></div>
+                <p class="audio-panel-description">Reduce background noise from other people in your call.</p>
+                <ol class="microphone-flow" aria-label="Incoming audio flow">
+                  <li><img src="./assets/call-source.svg" alt="" width="160" height="112"><svg class="flow-arrow icon"><use href="#i-arrow"/></svg><strong>Your call app</strong><span>Voices + room sound</span></li>
+                  <li><img src="./assets/filter.svg" alt="" width="160" height="112" data-filter-image><svg class="flow-arrow icon"><use href="#i-arrow"/></svg><strong>OpenKrisp</strong><span data-processing-text>Reducing the noise</span></li>
+                  <li><img src="./assets/playback.svg" alt="" width="160" height="112"><strong>You hear</strong><span>Headphones or speakers</span></li>
+                </ol>
+                <div class="preview-device"><span>Play through</span><span class="device-display">Your headphones<svg class="icon"><use href="#i-chevron"/></svg></span></div>
+                <div class="audio-level" aria-hidden="true"><span>Playback level</span><span class="level-track"><span></span></span></div>
+                <button class="transport is-on" aria-pressed="true" aria-label="Turn off incoming noise reduction in the preview"><span class="transport-icon" aria-hidden="true"></span><span data-button-text>Turn off OpenKrisp</span></button>
+                <div class="call-setup"><svg class="icon"><use href="#i-headphones"/></svg><div><p>In your call app, choose this speaker:</p><strong>OpenKrisp Speaker</strong><details><summary>How to connect</summary><p>Open your call app’s audio settings and select OpenKrisp Speaker as the speaker. Choose your headphones in OpenKrisp.</p></details></div></div>
+              </section>
+            </div>
+            <p class="app-footer"><svg class="icon"><use href="#i-shield"/></svg>Private by design. Audio is processed on your device.</p>
+          </div>
+        </div>
+        <p class="preview-caption">Try the controls. This is an interactive preview; it doesn’t access or process your audio.</p>
+      </section>
+
+      <section class="benefits wrap" id="why-openkrisp" aria-labelledby="benefits-title">
+        <div class="section-heading"><h2 id="benefits-title">A little less noise.<br>A lot more listening.</h2><p>A busy room shouldn’t get in the way of a good conversation. Clean up what you send and what you hear, independently.</p></div>
+        <div class="benefit-grid">
+          <article class="benefit"><svg class="benefit-icon icon"><use href="#i-mic"/></svg><h3>Sound clearer to them.</h3><p>Reduce the background noise around your microphone, so the people on your call can focus on your voice.</p><span class="benefit-detail">Your microphone, cleaned up</span></article>
+          <article class="benefit"><svg class="benefit-icon icon"><use href="#i-headphones"/></svg><h3>Hear them more clearly.</h3><p>Noisy room on the other end? Reduce background noise in incoming call audio before it reaches your headphones.</p><span class="benefit-detail">Their audio, cleaned up</span></article>
+          <article class="benefit"><svg class="benefit-icon icon"><use href="#i-shield"/></svg><h3>Keep the call yours.</h3><p>Your audio is processed on your computer. It isn’t uploaded to a cloud service for noise reduction.</p><span class="benefit-detail">Local processing, by design</span></article>
+        </div>
+      </section>
+
+      <section class="setup-section" id="how-it-works" aria-labelledby="setup-title">
+        <div class="wrap setup-layout">
+          <div class="setup-intro"><h2 id="setup-title">Your usual call app.<br>A quieter connection.</h2><p>OpenKrisp sits between your audio devices and your call app. Set it up once, then keep it running while you talk.</p><div class="connection-illustration" aria-hidden="true"><span><svg class="icon"><use href="#i-mic"/></svg></span><svg class="connection-arrow icon"><use href="#i-arrow"/></svg><span class="connection-brand"><span class="brand-mark"><i></i><i></i><i></i></span></span><svg class="connection-arrow icon"><use href="#i-arrow"/></svg><span><svg class="icon"><use href="#i-headphones"/></svg></span></div><p class="setup-note"><svg class="icon"><use href="#i-headphones"/></svg>Start with headphones for the beta.</p></div>
+          <ol class="setup-steps">
+            <li><span class="step-number">1</span><div><h3>Choose your devices.</h3><p>Open OpenKrisp and select your microphone and the headphones you want to listen through.</p></div></li>
+            <li><span class="step-number">2</span><div><h3>Turn on noise reduction.</h3><p>Turn on your microphone, your speakers, or both. Each side has its own control.</p></div></li>
+            <li><span class="step-number">3</span><div><h3>Connect your call app.</h3><p>In its audio settings, choose <strong>OpenKrisp Microphone</strong> as the microphone and <strong>OpenKrisp Speaker</strong> as the speaker.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="download-section wrap" id="download" aria-labelledby="download-title">
+        <div class="download-heading"><span class="release-label"><span class="status-dot"></span>Experimental beta · v0.1.0-beta.3</span><h2 id="download-title">Make room for the conversation.</h2><p>Get OpenKrisp for your desktop and try a quieter call.</p></div>
+        <div class="download-options">
+          <article class="platform-option"><svg class="platform-icon icon"><use href="#i-apple"/></svg><h3>OpenKrisp for macOS</h3><p>macOS 11 or later · Apple Silicon</p><a class="button button-primary" href="https://github.com/OpenKrisp/OpenKrisp/releases/download/v0.1.0-beta.3/OpenKrisp-0.1.0-beta.3-macos-arm64.pkg"><svg class="icon"><use href="#i-download"/></svg>Download for macOS<span class="file-type">.pkg</span></a><a class="installation-link" href="https://github.com/OpenKrisp/OpenKrisp/blob/main/docs/COMMUNITY_RELEASE.md#installing-on-macos">macOS installation guide<svg class="icon"><use href="#i-arrow"/></svg></a><p class="platform-note">The beta is unsigned and isn’t notarized. Follow the guide for installation and first launch.</p></article>
+          <article class="platform-option"><svg class="platform-icon icon"><use href="#i-linux"/></svg><h3>OpenKrisp for Linux</h3><p>x86-64 · Requires an active PipeWire session</p><div class="linux-downloads"><a class="button button-outline" href="https://github.com/OpenKrisp/OpenKrisp/releases/download/v0.1.0-beta.3/OpenKrisp-0.1.0-beta.3-linux-amd64.deb"><svg class="icon"><use href="#i-download"/></svg>Debian / Ubuntu<span class="file-type">.deb</span></a><a class="button button-outline" href="https://github.com/OpenKrisp/OpenKrisp/releases/download/v0.1.0-beta.3/OpenKrisp-0.1.0-beta.3-linux-x86_64.rpm"><svg class="icon"><use href="#i-download"/></svg>Fedora<span class="file-type">.rpm</span></a></div><a class="installation-link" href="https://github.com/OpenKrisp/OpenKrisp/blob/main/packaging/linux/INSTALL.md">Linux installation guide<svg class="icon"><use href="#i-arrow"/></svg></a><p class="platform-note">Targets Debian 12, Ubuntu 24.04, and Fedora 44. Linux packages are still awaiting validation.</p></article>
+        </div>
+        <div class="beta-note"><svg class="icon"><use href="#i-help"/></svg><p>Device compatibility and real-call quality are still being tested. Downloads require repository access while the beta is private. <a href="https://github.com/OpenKrisp/OpenKrisp/releases/tag/v0.1.0-beta.3">See release notes and validation details.</a></p></div>
+      </section>
+
+      <section class="faq-section wrap" aria-labelledby="faq-title">
+        <div class="faq-intro"><h2 id="faq-title">A few things<br> to know.</h2><p>Need a hand getting connected?<br><a href="https://github.com/OpenKrisp/OpenKrisp/issues">Get help on GitHub<svg class="icon"><use href="#i-arrow"/></svg></a></p></div>
+        <div class="faq-list">
+          <details><summary>Does my audio leave my computer?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>OpenKrisp processes your audio locally on your device. It doesn’t upload audio to a cloud service for noise reduction. Your call app still handles the call itself.</p></details>
+          <details><summary>Can I clean just one side of the call?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>Yes. Your microphone and incoming call audio have independent controls. Use either one on its own, or turn on both.</p></details>
+          <details><summary>Which call apps can I use it with?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>Use a call app that lets you select its microphone and speaker devices. Choose OpenKrisp Microphone and OpenKrisp Speaker in its audio settings. Compatibility is still being tested during the beta.</p></details>
+          <details><summary>Is it available for Windows or Intel Macs?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>The current beta targets Apple Silicon Macs and x86-64 Linux. Windows and Intel Mac installers aren’t provided.</p></details>
+          <details><summary>Can I use it for music or without headphones?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>Noise reduction is designed for speech. Use your usual audio output for music. Start with headphones for calls; speakerphone use hasn’t been validated yet.</p></details>
+          <details><summary>Can I look at the source?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>Yes, with access to the repository during the private beta. OpenKrisp is source available under the PolyForm Perimeter License 1.0.0, which restricts competing products. <a href="https://github.com/OpenKrisp/OpenKrisp/blob/main/LICENSE">Read the license</a> and <a href="https://github.com/OpenKrisp/OpenKrisp/blob/main/CONTRIBUTING.md">contribution guide</a>.</p></details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer wrap"><div><a class="wordmark" href="#" aria-label="OpenKrisp home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>OpenKrisp</a><p>A clearer call, on your own computer.</p></div><nav aria-label="Footer navigation"><a href="https://github.com/OpenKrisp/OpenKrisp">GitHub</a><a href="https://github.com/OpenKrisp/OpenKrisp/releases">Releases</a><a href="https://github.com/OpenKrisp/OpenKrisp/blob/main/LICENSE">License</a></nav></footer>
+
+    <dialog id="help-dialog" aria-labelledby="help-dialog-title"><div class="dialog-heading"><h2 id="help-dialog-title">Try OpenKrisp’s controls</h2><button class="quiet-button" id="close-help" aria-label="Close preview help"><svg class="icon"><use href="#i-close"/></svg></button></div><p>The two panels work independently. Try turning either side on or off to see the audio path change.</p><p>This website is a visual preview. It doesn’t use your microphone or process any sound.</p><a class="button button-primary" href="#download" id="help-download">Get the desktop app<svg class="icon"><use href="#i-download"/></svg></a></dialog>
+  </body>
+</html>

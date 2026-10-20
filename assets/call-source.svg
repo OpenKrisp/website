@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="flow-illustration" viewBox="0 0 160 112" fill="none" aria-hidden="true"><style>.illustration-wash{fill:#0f1f1b}.illustration-ink{stroke:#a8bbb5;stroke-width:1.7}.illustration-surface{fill:#142620}.illustration-shadow{stroke:#29473c;stroke-width:3}.illustration-noise{stroke:#82968e}.illustration-accent{stroke:#63d9b3}.filter-face{fill:#1c3c30;stroke:#7aa18e}.filter-side{fill:#102a20;stroke:#52756a}.filter-slot{stroke:#08110f;stroke-width:4}.filter-mark{stroke:#a8bbb5;stroke-width:6}.filter-mark.is-reducing{stroke:#63d9b3}.filter-detail{stroke:#52756a;stroke-width:2.5}.window-dots{stroke-width:3}.call-mic-tile{fill:#142d24;stroke:#29473c}</style>
+    <path class="illustration-wash" d="M25 33C37 13 109 6 132 31s11 59-20 69S34 93 25 73 17 49 25 33Z" />
+    <g class="illustration-ink" stroke-linecap="round" stroke-linejoin="round">
+      <path class="illustration-shadow" d="M38 102h85" />
+      <g transform="rotate(-5 80 58)">
+        <rect class="illustration-surface" x="29" y="22" width="102" height="70" rx="10" />
+        <path d="M29 38h102M64 101h32M80 92v9" />
+        <path class="window-dots" d="M39 30h1m6 0h1m6 0h1" />
+        <rect class="call-mic-tile" x="38" y="46" width="38" height="36" rx="7" />
+        <circle cx="57" cy="58" r="5" />
+        <path d="M47 74a10 10 0 0 1 20 0" />
+        <path class="illustration-accent" d="M86 61v7m7-15v23m7-18v13m7-18v23m7-15v7" />
+      </g>
+      <path class="illustration-noise" d="m14 51 4-5 3 9 5-6M135 34l5-4-2 9 6-4" />
+    </g>
+  </svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="flow-illustration" viewBox="0 0 160 112" fill="none" aria-hidden="true"><style>.illustration-wash{fill:#0f1f1b}.illustration-ink{stroke:#a8bbb5;stroke-width:1.7}.illustration-surface{fill:#142620}.illustration-shadow{stroke:#29473c;stroke-width:3}.illustration-noise{stroke:#82968e}.illustration-accent{stroke:#63d9b3}.filter-face{fill:#1c3c30;stroke:#7aa18e}.filter-side{fill:#102a20;stroke:#52756a}.filter-slot{stroke:#08110f;stroke-width:4}.filter-mark{stroke:#a8bbb5;stroke-width:6}.filter-mark.is-reducing{stroke:#63d9b3}.filter-detail{stroke:#52756a;stroke-width:2.5}.window-dots{stroke-width:3}.call-mic-tile{fill:#142d24;stroke:#29473c}</style>
+    <path class="illustration-wash" d="M31 41C41 13 100 5 121 28s18 66-14 74S14 86 31 41Z" />
+    <g class="illustration-ink" stroke-linecap="round" stroke-linejoin="round">
+      <path class="illustration-shadow" d="M52 102h58" />
+      <g transform="rotate(-12 80 53)">
+        <rect class="illustration-surface" x="64" y="16" width="32" height="57" rx="16" />
+        <path d="M73 29h14m-16 8h18m-18 8h18m-16 8h14" />
+        <path d="M56 54v4a24 24 0 0 0 48 0v-4M80 82v18" />
+        <path class="illustration-accent" d="M74 65h12" />
+      </g>
+      <path d="M66 101h32" />
+      <g class="illustration-noise">
+        <path d="m27 28 4-6 4 8 4-6M120 53l5-5-2 10 6-4M40 77l-5 4m7 3-1 5M111 17v7m-3-4h6" />
+        <circle cx="24" cy="56" r="2" /><circle cx="133" cy="31" r="2" />
+      </g>
+    </g>
+  </svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="flow-illustration" viewBox="0 0 160 112" fill="none" aria-hidden="true"><style>.illustration-wash{fill:#0f1f1b}.illustration-ink{stroke:#a8bbb5;stroke-width:1.7}.illustration-surface{fill:#142620}.illustration-shadow{stroke:#29473c;stroke-width:3}.illustration-noise{stroke:#82968e}.illustration-accent{stroke:#63d9b3}.filter-face{fill:#1c3c30;stroke:#7aa18e}.filter-side{fill:#102a20;stroke:#52756a}.filter-slot{stroke:#08110f;stroke-width:4}.filter-mark{stroke:#a8bbb5;stroke-width:6}.filter-mark.is-reducing{stroke:#63d9b3}.filter-detail{stroke:#52756a;stroke-width:2.5}.window-dots{stroke-width:3}.call-mic-tile{fill:#142d24;stroke:#29473c}</style>
+    <path class="illustration-wash" d="M22 67C15 35 43 10 85 13s57 15 53 49-35 41-66 39S27 91 22 67Z" />
+    <g class="illustration-ink" stroke-linecap="round" stroke-linejoin="round">
+      <path class="illustration-shadow" d="M47 101h70" />
+      <path class="filter-side" d="m109 24 11 10v57l-11 9-64-10V32Z" />
+      <rect class="filter-face" x="38" y="19" width="72" height="73" rx="16" />
+      <path class="filter-slot" d="M45 49v14m58-14v14" />
+      <g class="filter-mark is-reducing" transform="rotate(18 75 51)">
+        <path d="M62 48v15m12-30v32m12-24v22" />
+      </g>
+      <path class="filter-detail" d="M65 80h18" />
+      <path class="illustration-noise" d="m17 50 4-4 3 9 5-6m-10 18 5-3" />
+      <path class="illustration-accent" d="M125 56h17m-5-20v8m-4-4h8" />
+    </g>
+  </svg>
