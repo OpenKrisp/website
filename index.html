@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#08110f">
-    <meta name="description" content="Private, local noise reduction for both sides of your calls. Explore OpenKrisp’s source and get the desktop beta for macOS and Linux.">
+    <meta name="description" content="Fully open source noise reduction for both sides of your calls. Private audio processing on your device. Licensed under GNU GPLv3 for macOS and Linux.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="OpenKrisp — Clearer calls. Private by design.">
-    <meta property="og:description" content="Noise reduction runs on your computer. Explore the source and get the OpenKrisp desktop beta for macOS and Linux.">
+    <meta property="og:title" content="OpenKrisp — Open source. Private by design.">
+    <meta property="og:description" content="Fully open source under GNU GPLv3. Noise reduction for both sides of your calls, processed on your device.">
     <meta property="og:url" content="https://openkrisp-website.pinkrain16.chatgpt.site">
     <meta property="og:image" content="https://openkrisp-website.pinkrain16.chatgpt.site/assets/app-icon.png">
-    <title>OpenKrisp — Clearer calls. Private by design.</title>
+    <title>OpenKrisp — Open source. Private by design.</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./styles.css">
     <script type="module" src="./app.js"></script>
@@ -38,7 +38,7 @@
       <nav aria-label="Main navigation">
         <a class="nav-link" href="#how-it-works">How it works</a>
         <a class="nav-link" href="#privacy">Privacy</a>
-        <a class="nav-link" href="#source">Source</a>
+        <a class="nav-link" href="#source">Open source</a>
         <a class="button button-small button-outline" href="#download">Get the beta<svg class="icon"><use href="#i-download"/></svg></a>
       </nav>
     </header>
@@ -54,7 +54,7 @@
         </div>
         <div class="hero-assurances">
           <a href="#privacy"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Local audio processing</a>
-          <a href="#source"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>Source available</a>
+          <a href="#source"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>Fully open source</a>
         </div>
 
         <div class="app-preview" aria-label="Interactive preview of the OpenKrisp desktop app">
@@ -117,7 +117,7 @@
           </div>
         </div>
         <section class="source-section" id="source" aria-labelledby="source-title">
-          <div class="source-copy"><svg class="source-icon icon" aria-hidden="true"><use href="#i-code"/></svg><div><h2 id="source-title">Source you can inspect.</h2><p>Explore how OpenKrisp works, follow development, and contribute on GitHub.</p><p class="source-terms">Source available under <a href="https://github.com/OpenKrisp/OpenKrisp/blob/main/LICENSE">PolyForm Perimeter 1.0.0</a>, which restricts competing products. Repository access is required during the private beta.</p></div></div>
+          <div class="source-copy"><svg class="source-icon icon" aria-hidden="true"><use href="#i-code"/></svg><div><h2 id="source-title">Fully open source.</h2><p>Inspect the code, modify it, and share your improvements.</p><p class="source-terms">Licensed under <a href="https://github.com/OpenKrisp/OpenKrisp/blob/main/LICENSE">GNU GPLv3</a> (GPL-3.0-only). Commercial use and redistribution are permitted under the license’s terms. Source access requires repository access during the private beta.</p></div></div>
           <a class="button button-outline" href="https://github.com/OpenKrisp/OpenKrisp"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>Explore the source</a>
         </section>
       </section>
@@ -144,6 +144,7 @@
 
       <section class="download-section wrap" id="download" aria-labelledby="download-title">
         <div class="download-heading"><span class="release-label"><span class="status-dot"></span>Experimental beta · v0.1.0-beta.3</span><h2 id="download-title">Make room for the conversation.</h2><p>Quieter calls, with noise reduction that stays on your device.</p></div>
+        <p class="release-license-note">The current source uses GPLv3. These earlier beta installers retain their original bundled license terms. <a href="https://github.com/OpenKrisp/OpenKrisp/blob/main/docs/LICENSING.md">About the license transition</a></p>
         <div class="download-options">
           <article class="platform-option"><svg class="platform-icon icon"><use href="#i-apple"/></svg><h3>OpenKrisp for macOS</h3><p>macOS 11 or later · Apple Silicon</p><a class="button button-primary" href="https://github.com/OpenKrisp/OpenKrisp/releases/download/v0.1.0-beta.3/OpenKrisp-0.1.0-beta.3-macos-arm64.pkg"><svg class="icon"><use href="#i-download"/></svg>Download for macOS<span class="file-type">.pkg</span></a><a class="installation-link" href="https://github.com/OpenKrisp/OpenKrisp/blob/main/docs/COMMUNITY_RELEASE.md#installing-on-macos">macOS installation guide<svg class="icon"><use href="#i-arrow"/></svg></a><p class="platform-note">The beta is unsigned and isn’t notarized. Follow the guide for installation and first launch.</p></article>
           <article class="platform-option"><svg class="platform-icon icon"><use href="#i-linux"/></svg><h3>OpenKrisp for Linux</h3><p>x86-64 · Requires an active PipeWire session</p><div class="linux-downloads"><a class="button button-outline" href="https://github.com/OpenKrisp/OpenKrisp/releases/download/v0.1.0-beta.3/OpenKrisp-0.1.0-beta.3-linux-amd64.deb"><svg class="icon"><use href="#i-download"/></svg>Debian / Ubuntu<span class="file-type">.deb</span></a><a class="button button-outline" href="https://github.com/OpenKrisp/OpenKrisp/releases/download/v0.1.0-beta.3/OpenKrisp-0.1.0-beta.3-linux-x86_64.rpm"><svg class="icon"><use href="#i-download"/></svg>Fedora<span class="file-type">.rpm</span></a></div><a class="installation-link" href="https://github.com/OpenKrisp/OpenKrisp/blob/main/packaging/linux/INSTALL.md">Linux installation guide<svg class="icon"><use href="#i-arrow"/></svg></a><p class="platform-note">Targets Debian 12, Ubuntu 24.04, and Fedora 44. Linux packages are still awaiting validation.</p></article>
@@ -159,7 +160,7 @@
           <details><summary>Which call apps can I use it with?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>Use a call app that lets you select its microphone and speaker devices. Choose OpenKrisp Microphone and OpenKrisp Speaker in its audio settings. Compatibility is still being tested during the beta.</p></details>
           <details><summary>Is it available for Windows or Intel Macs?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>The current beta targets Apple Silicon Macs and x86-64 Linux. Windows and Intel Mac installers aren’t provided.</p></details>
           <details><summary>Can I use it for music or without headphones?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>Noise reduction is designed for speech. Use your usual audio output for music. Start with headphones for calls; speakerphone use hasn’t been validated yet.</p></details>
-          <details><summary>Can I look at the source?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>Yes, with access to the repository during the private beta. OpenKrisp is source available under the PolyForm Perimeter License 1.0.0, which restricts competing products. <a href="https://github.com/OpenKrisp/OpenKrisp/blob/main/LICENSE">Read the license</a> and <a href="https://github.com/OpenKrisp/OpenKrisp/blob/main/CONTRIBUTING.md">contribution guide</a>.</p></details>
+          <details><summary>Is OpenKrisp fully open source?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>Yes. The current OpenKrisp source is licensed under GNU GPLv3 (GPL-3.0-only). You can use, inspect, modify, and redistribute it, including commercially, under the license’s terms. Distributed covered modifications must preserve GPLv3 licensing and corresponding source access for recipients. Source access requires repository access while the beta is private. Earlier beta installers retain their original bundled terms. <a href="https://github.com/OpenKrisp/OpenKrisp/blob/main/LICENSE">Read the license</a> and <a href="https://github.com/OpenKrisp/OpenKrisp/blob/main/CONTRIBUTING.md">contribution guide</a>.</p></details>
         </div>
       </section>
     </main>

@@ -26,10 +26,11 @@ The production output is `dist/`. Deploy that directory to any static host; rela
 - Product details, setup instructions, compatibility, and license language are based on the desktop app’s README and source.
 - Downloads are pinned to `v0.1.0-beta.3`. Update the release label, three package links, and release-notes link in `index.html` together when a new validated release is ready.
 - Repository access is required for downloads during the private beta. The site says so before visitors follow the release links.
+- Current app source is licensed under GNU GPLv3 only (`GPL-3.0-only`). The pinned beta.3 installers predate the licensing transition and retain their bundled terms; the download section and FAQ distinguish them from current source.
 - The original app icon and SVG illustrations come from the first-party `OpenKrisp/OpenKrisp` desktop project. No fonts, trackers, or assets load from third-party servers.
 
 ## Design
 
 Brand colors: forest `#08110f`, surface `#0f1f1b`, text `#effcf8`, muted `#a8bbb5`, mint `#63d9b3`, borders `#29473c`. Typography follows the app’s system sans-serif stack with its rounded wordmark.
 
-The page leads with privacy and an interactive recreation of the real two-panel desktop app. A dedicated section shows the boundary of local noise reduction and highlights source access with repository and license links. Use “source available” for the current PolyForm Perimeter license; its noncompete restriction does not meet the Open Source Definition. Source access requires repository permission during the private beta. Supporting sections explain independent audio paths, connection steps, and beta requirements. Mobile stacks the two panels without shrinking their controls. Keyboard focus, native disclosure elements, a modal help dialog, and reduced-motion preferences are supported.
+The page leads with privacy and an interactive recreation of the real two-panel desktop app. A dedicated section shows the boundary of local noise reduction and highlights that current app source is fully open source under GNU GPLv3 only, with repository and license links. Source access requires repository permission during the private beta. Supporting sections explain independent audio paths, connection steps, and beta requirements. Mobile stacks the two panels without shrinking their controls. Keyboard focus, native disclosure elements, a modal help dialog, and reduced-motion preferences are supported.
