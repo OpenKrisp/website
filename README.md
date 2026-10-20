@@ -4,7 +4,7 @@ The product website for the OpenKrisp desktop app. The design uses the desktop a
 
 ## Develop
 
-Requires Node.js 22 or later. No package installation or third-party runtime dependencies are needed.
+Requires Node.js 24. No package installation or third-party runtime dependencies are needed.
 
 ```sh
 npm run dev
@@ -18,7 +18,26 @@ npm run build
 npm run preview
 ```
 
-The production output is `dist/`. Deploy that directory to any static host; relative paths also support a GitHub Pages project subdirectory. The local preview server is for development only. `.openai/hosting.json` connects the private Sites deployment; the GitHub origin remains `OpenKrisp/website`.
+The production output is `dist/`. The local preview server is for development only.
+
+## Deploy
+
+Production is hosted on Vercel at [openkrisp.com](https://openkrisp.com/), with
+`www.openkrisp.com` redirecting to the primary domain. The Vercel project is
+`openkrisp-website` in the domain-owning team.
+
+`vercel.json` selects the Other framework preset, runs `npm run check && npm run build`,
+and serves only `dist/`. Node.js 24 is pinned in `package.json`. No environment
+variables or server functions are needed. For a direct deployment, run
+`npx vercel link` to select this project, then `npx vercel --prod`.
+
+The team's Hobby plan does not support connecting private GitHub organization
+repositories. Automatic deployments require making only `OpenKrisp/website`
+public or using a suitable Pro team. Until that Git connection is enabled,
+pushes to GitHub do not deploy automatically.
+
+`.vercel/` contains local project linkage and is ignored. `.openai/hosting.json`
+retains the earlier private Sites preview identity; Vercel does not use it.
 
 ## Content and behavior
 

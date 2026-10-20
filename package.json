@@ -4,7 +4,7 @@
   "private": true,
   "description": "The website for the OpenKrisp desktop app.",
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": { "node": "24.x" },
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
