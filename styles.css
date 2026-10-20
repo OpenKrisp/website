@@ -136,8 +136,6 @@ h1 { margin-top: 24px; font-size: clamp(48px, 6.2vw, 80px); line-height: 1.04; f
 .source-icon { width: 24px; height: 24px; margin-top: 3px; color: var(--accent); }
 .source-copy h2 { font-size: 24px; letter-spacing: -.6px; }
 .source-copy p { margin-top: 11px; font-size: 13px; max-width: 65ch; }
-.source-copy .source-terms { margin-top: 9px; font-size: 11px; }
-.source-terms a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .source-section > .button { flex: 0 0 auto; font-size: 13px; min-height: 46px; padding: 12px 17px; }
 .benefits { padding-top: 100px; padding-bottom: 110px; }
 .section-heading { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: end; }
