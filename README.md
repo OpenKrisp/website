@@ -50,4 +50,6 @@ retains the earlier private Sites preview identity; Vercel does not use it.
 
 Brand colors: forest `#08110f`, surface `#0f1f1b`, text `#effcf8`, muted `#a8bbb5`, mint `#63d9b3`, borders `#29473c`. Typography follows the app’s system sans-serif stack with its rounded wordmark.
 
+Shared typography tokens in `styles.css` define 12px metadata, 14px controls and supporting text, 16px body copy, 20px component titles, and a 24px subsection title. Hero and section headings scale fluidly with the viewport. Keep components on this scale and adapt their layout instead of shrinking labels on mobile; line-height tokens preserve the same reading rhythm throughout.
+
 The page leads with privacy and an interactive recreation of the real two-panel desktop app. A dedicated section shows the boundary of local noise reduction and highlights that current app source is fully open source under GNU GPLv3 only, with repository and license links. Supporting sections explain independent audio paths, connection steps, and beta requirements. Mobile stacks the two panels without shrinking their controls. Keyboard focus, native disclosure elements, a modal help dialog, and reduced-motion preferences are supported.
