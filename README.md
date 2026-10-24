@@ -82,7 +82,11 @@ At `/` (or `/index.html`), JavaScript chooses the saved `openkrisp.language`
 preference, then the first supported browser language, then English. Regional
 variants match their base language; Portuguese variants use Brazilian Portuguese.
 Explicit localized URLs always respect their language, so shared links and search
-results stay predictable. Only manual selections are saved. Switching preserves
+results stay predictable. The picker matches the desktop app: a compact globe,
+native language name and chevron over a native select, with a screen-reader label
+and current-language description. Its menu retains full native names, including
+Português (Brasil). “System default” saves `system` and follows the browser language.
+Only manual selections are saved. Switching preserves
 the path, query string, and fragment, including the current section. Storage
 failures do not prevent navigation. Without JavaScript the entry page is English
 and language links remain available below the selector.

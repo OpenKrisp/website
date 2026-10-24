@@ -2,7 +2,7 @@
 export const languages = [
   { code: 'en', name: 'English', socialLocale: 'en_US' },
   { code: 'es', name: 'Español', socialLocale: 'es_ES' },
-  { code: 'pt-BR', name: 'Português (Brasil)', socialLocale: 'pt_BR' },
+  { code: 'pt-BR', name: 'Português (Brasil)', shortName: 'Português', socialLocale: 'pt_BR' },
   { code: 'fr', name: 'Français', socialLocale: 'fr_FR' },
   { code: 'de', name: 'Deutsch', socialLocale: 'de_DE' },
 ];
@@ -36,19 +36,23 @@ export function localizedUrl(input, locale) {
 
 export function initializeLanguage(environment = globalThis) {
   const { window, navigator, document } = environment;
+  const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language];
+  let saved;
+  try { saved = window.localStorage.getItem(preferenceKey); } catch { /* Storage may be disabled. */ }
+  const current = pathLanguage(window.location.pathname);
   // Explicit localized URLs are shareable and never redirected by preferences.
-  if (!pathLanguage(window.location.pathname)) {
-    let saved;
-    try { saved = window.localStorage.getItem(preferenceKey); } catch { /* Storage may be disabled. */ }
-    const locale = chooseLanguage(saved, navigator.languages?.length ? navigator.languages : [navigator.language]);
+  if (!current) {
+    const locale = chooseLanguage(saved, browserLanguages);
     window.location.replace(localizedUrl(window.location.href, locale));
     return;
   }
 
   const selector = document.querySelector('#language');
+  if (selector) selector.value = saved === 'system' && chooseLanguage(null, browserLanguages) === current ? 'system' : current;
   selector?.addEventListener('change', () => {
-    const locale = selector.value;
-    try { window.localStorage.setItem(preferenceKey, locale); } catch { /* Selection still works. */ }
+    const preference = selector.value;
+    const locale = chooseLanguage(preference, browserLanguages);
+    try { window.localStorage.setItem(preferenceKey, preference); } catch { /* Selection still works. */ }
     window.location.assign(localizedUrl(window.location.href, locale));
   });
 }

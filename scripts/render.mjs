@@ -48,6 +48,8 @@ export async function renderPage(locale = 'en') {
   const template = await readFile(new URL('index.html', project), 'utf8');
   const data = {
     locale,
+    languageShortName: escapeHtml(language.shortName ?? language.name),
+    currentLanguage: escapeHtml(translate(locale, 'language.current').replace('{language}', language.name)),
     canonical: `${origin}/${locale}/`,
     socialLocale: language.socialLocale,
     alternates: [...languages.map(({ code }) => `<link rel="alternate" hreflang="${code}" href="${origin}/${code}/">`),

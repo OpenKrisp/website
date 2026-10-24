@@ -14,6 +14,7 @@ test('saved preference, supported browser language, then English; regional match
   assert.equal(chooseLanguage(null, ['en-GB', 'fr']), 'en');
   assert.equal(chooseLanguage(null, ['ja', 'zh-CN']), 'en');
   assert.equal(chooseLanguage(null), 'en');
+  assert.equal(chooseLanguage('system', ['pt-BR']), 'pt-BR');
 });
 
 test('switching preserves page, query and anchor, including future nested pages', () => {
@@ -56,13 +57,34 @@ test('entry negotiation and manual selection work with storage denied; explicit 
   const explicit = browserEnvironment({ path: '/pt-BR/', saved: 'es' });
   initializeLanguage(explicit);
   assert.equal(explicit.calls.replace, undefined);
+  explicit.selector.value = 'de';
   explicit.calls.change();
   assert.deepEqual(explicit.calls.saved, [preferenceKey, 'de']);
   assert.equal(explicit.calls.assign, 'https://openkrisp.com/de/?campaign=beta#download');
   const denied = browserEnvironment({ path: '/en/', blocked: true });
   initializeLanguage(denied);
+  denied.selector.value = 'de';
   denied.calls.change();
   assert.equal(denied.calls.assign, 'https://openkrisp.com/de/?campaign=beta#download');
+});
+
+test('desktop-style System default follows browser language and respects shared URLs', () => {
+  const automatic = browserEnvironment({ path: '/fr/', saved: 'system' });
+  initializeLanguage(automatic);
+  assert.equal(automatic.selector.value, 'system');
+  const explicit = browserEnvironment({ path: '/de/', saved: 'system' });
+  initializeLanguage(explicit);
+  assert.equal(explicit.selector.value, 'de');
+  assert.equal(explicit.calls.replace, undefined);
+  explicit.selector.value = 'system';
+  explicit.calls.change();
+  assert.deepEqual(explicit.calls.saved, [preferenceKey, 'system']);
+  assert.equal(explicit.calls.assign, 'https://openkrisp.com/fr/?campaign=beta#download');
+  const denied = browserEnvironment({ path: '/de/', blocked: true });
+  initializeLanguage(denied);
+  denied.selector.value = 'system';
+  denied.calls.change();
+  assert.equal(denied.calls.assign, 'https://openkrisp.com/fr/?campaign=beta#download');
 });
 
 const placeholders = message => [...message.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort();
@@ -80,6 +102,8 @@ for (const { code, name, socialLocale } of languages) {
     assert.ok(html.includes(`<meta property="og:url" content="https://openkrisp.com/${code}/">`));
     assert.ok(html.includes(`<meta property="og:locale" content="${socialLocale}">`));
     assert.ok(html.includes(`<option value="${code}" lang="${code}" selected>${name}</option>`));
+    assert.ok(html.includes('aria-describedby="language-current"'));
+    assert.ok(html.includes(`<option value="system">${catalogs[code]['language.system']}</option>`));
     for (const { code: alternate } of languages) {
       assert.ok(html.includes(`hreflang="${alternate}" href="https://openkrisp.com/${alternate}/"`));
     }
