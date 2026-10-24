@@ -66,6 +66,10 @@ extensions, and the exact audio device names **OpenKrisp Microphone** and
 adjacent translated audio-flow labels convey their meaning; the preview and
 privacy diagram have translated accessible descriptions.
 
+See [the language and tone guide](docs/localization.md) for regional wording,
+editorial review criteria, and the distinction between technical validation and
+native-language review.
+
 `index.html` is a shared template. `scripts/render.mjs` safely escapes messages,
 supports line breaks with `\n`, and renders named slots such as `{microphone}` and
 `{license}` with fixed semantic markup and destinations. Translate whole sentences
