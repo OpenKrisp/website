@@ -126,5 +126,7 @@
   "links.releaseNotes": "See release notes and validation details.",
   "links.githubHelp": "Get help on GitHub",
   "links.license": "license",
-  "links.contributing": "contribution guide"
+  "links.contributing": "contribution guide",
+  "language.system": "System default",
+  "language.current": "Current language: {language}."
 }
