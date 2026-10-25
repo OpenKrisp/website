@@ -50,6 +50,8 @@ including expanded content and longer labels.
 
 Automated tests verify catalog coverage, placeholders, rendering, language
 selection, and URLs. They do not establish fluency or idiomatic quality. The
-current copy has had an AI editorial review; independent native-speaker editorial
-sign-off has not been recorded. Record any future native-editor feedback with
-the language, affected keys, and rationale.
+current copy has had a separate AI reviewer for each language, followed by an
+integration review. See the [independent review record](independent-language-review.md)
+for scope and findings. Human native-speaker editorial sign-off has not been
+recorded. Record future native-editor feedback with the language, affected keys,
+and rationale.
