@@ -36,6 +36,25 @@ document language for automatic hyphenation. Final visual checks found no
 horizontal overflow or clipped text at 1440px, 390px, or 320px. Both button states
 and help dialogs were checked in every language.
 
+## Noise-reduction hero
+
+The approved design leads with noise reduction and places privacy information
+after setup. A separate reviewer for each language reviewed the selected hero
+headline and supporting sentence. The reviewed copy is used in the production
+catalogs for the hero, page title, description, and social metadata.
+
+| Language | Hero headline |
+| --- | --- |
+| English | Reduce the noise. Keep the conversation clear. |
+| Spanish | Menos ruido. Conversaciones más claras. |
+| Brazilian Portuguese | Menos ruído. Mais clareza nas conversas. |
+| French | Moins de bruit. Des échanges plus clairs. |
+| German | Weniger Störgeräusche. Klarere Gespräche. |
+
+The supporting copy in each language identifies independent noise-reduction
+controls for microphone audio and received sound during a call. It does not
+promise complete silence or imply that physical audio devices are switched off.
+
 These are independent AI editorial reviews. They are not human native-speaker
 sign-off, and automated or visual checks do not establish perfect fluency. Future
 human-editor feedback should record the language, affected keys, and rationale.

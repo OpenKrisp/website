@@ -42,7 +42,6 @@
       <a class="wordmark" href="#" aria-label="{{nav.home}}"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>OpenKrisp</a>
       <nav aria-label="{{nav.main}}">
         <a class="nav-link" href="#how-it-works">{{nav.how}}</a>
-        <a class="nav-link" href="#privacy">{{nav.privacy}}</a>
         <a class="nav-link" href="#source">{{nav.source}}</a>
         <a class="button button-small button-outline" href="#download">{{nav.beta}}<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg></a>
       </nav>
@@ -63,85 +62,57 @@
 
     <main id="main">
       <section class="hero wrap" aria-labelledby="hero-title">
-        <a class="beta-badge" href="#download"><span class="status-dot"></span>{{hero.badge}}<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
-        <h1 id="hero-title">{{hero.title}}</h1>
-        <p class="hero-description">{{hero.description}}</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#download"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>{{common.getApp}}</a>
-          <a class="button button-text" href="https://github.com/OpenKrisp/OpenKrisp"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>{{common.explore}}</a>
+        <div class="hero-copy">
+          <h1 id="hero-title">{{hero.title}}</h1>
+          <p class="hero-description">{{hero.description}}</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#download"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>{{common.getApp}}</a>
+            <a class="button button-text" href="#how-it-works">{{nav.how}}<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </div>
+          <a class="beta-badge" href="#download"><span class="status-dot"></span>{{hero.badge}}</a>
         </div>
-        <div class="hero-assurances">
-          <a href="#privacy"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>{{common.local}}</a>
-          <a href="#source"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-code"/></svg>{{common.open}}</a>
-        </div>
-
-        <div class="app-preview" aria-label="{{preview.label}}">
-          <div class="window-chrome" aria-hidden="true"><span class="window-controls"><i></i><i></i><i></i></span><span class="window-title">OpenKrisp</span><span class="preview-tag">{{preview.tag}}</span></div>
-          <div class="desktop-app">
-            <div class="app-header"><div class="wordmark"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>OpenKrisp</div><button class="quiet-button" id="preview-help"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-help"/></svg>{{common.help}}</button></div>
-            <div class="audio-workspace" data-status-on="{{status.on}}" data-status-off="{{status.off}}" data-button-on="{{common.turnOn}}" data-button-off="{{common.turnOff}}" data-processing-on="{{flow.reducing}}" data-processing-off="{{flow.off}}">
-              <section class="audio-panel" data-route="microphone" data-label-on="{{microphone.turnOn}}" data-label-off="{{microphone.turnOff}}" aria-labelledby="preview-mic-title">
-                <div class="audio-panel-heading"><h2 id="preview-mic-title">{{microphone.title}}</h2><span class="route-status is-on" role="status"><span class="status-dot"></span><span data-status-text>{{status.on}}</span></span></div>
-                <p class="audio-panel-description">{{microphone.description}}</p>
-                <ol class="microphone-flow" aria-label="{{microphone.flow}}">
-                  <li><img src="/assets/microphone.svg" alt="" width="160" height="112"><svg class="flow-arrow icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><strong>{{microphone.title}}</strong><span>{{flow.room}}</span></li>
-                  <li><img src="/assets/filter.svg" alt="" width="160" height="112" data-filter-image><svg class="flow-arrow icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><strong>OpenKrisp</strong><span data-processing-text>{{flow.reducing}}</span></li>
-                  <li><img src="/assets/call.svg" alt="" width="160" height="112"><strong>{{flow.virtualMicrophone}}</strong><span>{{flow.forCall}}</span></li>
-                </ol>
-                <div class="preview-device"><span>{{microphone.device}}</span><span class="device-display">{{microphone.example}}<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg></span></div>
-                <div class="audio-level" aria-hidden="true"><span>{{microphone.level}}</span><span class="level-track"><span></span></span></div>
-                <button class="transport is-on" aria-pressed="true" aria-label="{{microphone.turnOff}}"><span class="transport-icon" aria-hidden="true"></span><span data-button-text>{{common.turnOff}}</span></button>
-                <div class="call-setup"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mic"/></svg><div><p>{{microphone.callDevice}}</p><strong>OpenKrisp Microphone</strong><details><summary>{{common.connect}}</summary><p>{{microphone.connect}}</p></details></div></div>
-              </section>
-              <section class="audio-panel" data-route="speakers" data-label-on="{{speakers.turnOn}}" data-label-off="{{speakers.turnOff}}" aria-labelledby="preview-speakers-title">
-                <div class="audio-panel-heading"><h2 id="preview-speakers-title">{{speakers.title}}</h2><span class="route-status is-on" role="status"><span class="status-dot"></span><span data-status-text>{{status.on}}</span></span></div>
-                <p class="audio-panel-description">{{speakers.description}}</p>
-                <ol class="microphone-flow" aria-label="{{speakers.flow}}">
-                  <li><img src="/assets/call-source.svg" alt="" width="160" height="112"><svg class="flow-arrow icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><strong>{{flow.callApp}}</strong><span>{{flow.voices}}</span></li>
-                  <li><img src="/assets/filter.svg" alt="" width="160" height="112" data-filter-image><svg class="flow-arrow icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><strong>OpenKrisp</strong><span data-processing-text>{{flow.reducing}}</span></li>
-                  <li><img src="/assets/playback.svg" alt="" width="160" height="112"><strong>{{flow.hear}}</strong><span>{{flow.playback}}</span></li>
-                </ol>
-                <div class="preview-device"><span>{{speakers.device}}</span><span class="device-display">{{speakers.example}}<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg></span></div>
-                <div class="audio-level" aria-hidden="true"><span>{{speakers.level}}</span><span class="level-track"><span></span></span></div>
-                <button class="transport is-on" aria-pressed="true" aria-label="{{speakers.turnOff}}"><span class="transport-icon" aria-hidden="true"></span><span data-button-text>{{common.turnOff}}</span></button>
-                <div class="call-setup"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-headphones"/></svg><div><p>{{speakers.callDevice}}</p><strong>OpenKrisp Speaker</strong><details><summary>{{common.connect}}</summary><p>{{speakers.connect}}</p></details></div></div>
-              </section>
+        <div class="hero-product">
+          <div class="app-preview" aria-label="{{preview.label}}">
+            <div class="window-chrome" aria-hidden="true"><span class="window-controls"><i></i><i></i><i></i></span><span class="window-title">OpenKrisp</span><span class="preview-tag">{{preview.tag}}</span></div>
+            <div class="desktop-app">
+              <div class="app-header"><div class="wordmark"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>OpenKrisp</div><button class="quiet-button" id="preview-help"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-help"/></svg>{{common.help}}</button></div>
+              <div class="audio-workspace" data-status-on="{{status.on}}" data-status-off="{{status.off}}" data-button-on="{{common.turnOn}}" data-button-off="{{common.turnOff}}" data-processing-on="{{flow.reducing}}" data-processing-off="{{flow.off}}">
+                <section class="audio-panel" data-route="microphone" data-label-on="{{microphone.turnOn}}" data-label-off="{{microphone.turnOff}}" aria-labelledby="preview-mic-title">
+                  <div class="audio-panel-heading"><h2 id="preview-mic-title">{{microphone.title}}</h2><span class="route-status is-on" role="status"><span class="status-dot"></span><span data-status-text>{{status.on}}</span></span></div>
+                  <p class="audio-panel-description">{{microphone.description}}</p>
+                  <ol class="microphone-flow" aria-label="{{microphone.flow}}">
+                    <li><img src="/assets/microphone.svg" alt="" width="160" height="112"><svg class="flow-arrow icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><strong>{{microphone.title}}</strong><span>{{flow.room}}</span></li>
+                    <li><img src="/assets/filter.svg" alt="" width="160" height="112" data-filter-image><svg class="flow-arrow icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><strong>OpenKrisp</strong><span data-processing-text>{{flow.reducing}}</span></li>
+                    <li><img src="/assets/call.svg" alt="" width="160" height="112"><strong>{{flow.virtualMicrophone}}</strong><span>{{flow.forCall}}</span></li>
+                  </ol>
+                  <div class="preview-device"><span>{{microphone.device}}</span><span class="device-display">{{microphone.example}}<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg></span></div>
+                  <div class="audio-level" aria-hidden="true"><span>{{microphone.level}}</span><span class="level-track"><span></span></span></div>
+                  <button class="transport is-on" aria-pressed="true" aria-label="{{microphone.turnOff}}"><span class="transport-icon" aria-hidden="true"></span><span data-button-text>{{common.turnOff}}</span></button>
+                  <div class="call-setup"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mic"/></svg><div><p>{{microphone.callDevice}}</p><strong>OpenKrisp Microphone</strong><details><summary>{{common.connect}}</summary><p>{{microphone.connect}}</p></details></div></div>
+                </section>
+                <section class="audio-panel" data-route="speakers" data-label-on="{{speakers.turnOn}}" data-label-off="{{speakers.turnOff}}" aria-labelledby="preview-speakers-title">
+                  <div class="audio-panel-heading"><h2 id="preview-speakers-title">{{speakers.title}}</h2><span class="route-status is-on" role="status"><span class="status-dot"></span><span data-status-text>{{status.on}}</span></span></div>
+                  <p class="audio-panel-description">{{speakers.description}}</p>
+                  <ol class="microphone-flow" aria-label="{{speakers.flow}}">
+                    <li><img src="/assets/call-source.svg" alt="" width="160" height="112"><svg class="flow-arrow icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><strong>{{flow.callApp}}</strong><span>{{flow.voices}}</span></li>
+                    <li><img src="/assets/filter.svg" alt="" width="160" height="112" data-filter-image><svg class="flow-arrow icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><strong>OpenKrisp</strong><span data-processing-text>{{flow.reducing}}</span></li>
+                    <li><img src="/assets/playback.svg" alt="" width="160" height="112"><strong>{{flow.hear}}</strong><span>{{flow.playback}}</span></li>
+                  </ol>
+                  <div class="preview-device"><span>{{speakers.device}}</span><span class="device-display">{{speakers.example}}<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg></span></div>
+                  <div class="audio-level" aria-hidden="true"><span>{{speakers.level}}</span><span class="level-track"><span></span></span></div>
+                  <button class="transport is-on" aria-pressed="true" aria-label="{{speakers.turnOff}}"><span class="transport-icon" aria-hidden="true"></span><span data-button-text>{{common.turnOff}}</span></button>
+                  <div class="call-setup"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-headphones"/></svg><div><p>{{speakers.callDevice}}</p><strong>OpenKrisp Speaker</strong><details><summary>{{common.connect}}</summary><p>{{speakers.connect}}</p></details></div></div>
+                </section>
+              </div>
+              <p class="app-footer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>{{preview.privacy}}</p>
             </div>
-            <p class="app-footer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>{{preview.privacy}}</p>
           </div>
+          <p class="preview-caption">{{preview.caption}}</p>
         </div>
-        <p class="preview-caption">{{preview.caption}}</p>
-      </section>
-
-      <section class="privacy-section wrap" id="privacy" aria-labelledby="privacy-title">
-        <div class="privacy-layout">
-          <div class="privacy-copy">
-            <svg class="privacy-icon icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>
-            <h2 id="privacy-title">{{privacy.title}}</h2>
-            <p>{{privacy.description}}</p>
-            <p class="privacy-scope">{{privacy.scope}}</p>
-          </div>
-          <div class="privacy-device" aria-label="{{privacy.deviceLabel}}">
-            <div class="privacy-device-heading"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg><span>{{privacy.deviceHeading}}</span></div>
-            <div class="privacy-audio-path" aria-hidden="true">
-              <span class="privacy-endpoint"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mic"/></svg></span>
-              <svg class="privacy-path-arrow icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-              <span class="privacy-processor"><span class="brand-mark"><i></i><i></i><i></i></span></span>
-              <svg class="privacy-path-arrow icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-              <span class="privacy-endpoint"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-headphones"/></svg></span>
-            </div>
-            <strong>{{common.local}}</strong>
-            <p>{{privacy.deviceDescription}}</p>
-          </div>
-        </div>
-        <section class="source-section" id="source" aria-labelledby="source-title">
-          <div class="source-copy"><svg class="source-icon icon" aria-hidden="true" focusable="false"><use href="#i-code"/></svg><div><h2 id="source-title">{{source.title}}</h2><p>{{source.description}}</p></div></div>
-          <a class="button button-outline" href="https://github.com/OpenKrisp/OpenKrisp"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>{{common.explore}}</a>
-        </section>
       </section>
 
       <section class="benefits wrap" id="why-openkrisp" aria-labelledby="benefits-title">
-        <div class="section-heading"><h2 id="benefits-title">{{benefits.title}}</h2><p>{{benefits.description}}</p></div>
+        <h2 id="benefits-title" class="sr-only">{{benefits.title}}</h2>
         <div class="benefit-grid">
           <article class="benefit"><svg class="benefit-icon icon" aria-hidden="true" focusable="false"><use href="#i-mic"/></svg><h3>{{benefits.microphoneTitle}}</h3><p>{{benefits.microphoneDescription}}</p><span class="benefit-detail">{{benefits.microphoneDetail}}</span></article>
           <article class="benefit"><svg class="benefit-icon icon" aria-hidden="true" focusable="false"><use href="#i-headphones"/></svg><h3>{{benefits.speakersTitle}}</h3><p>{{benefits.speakersDescription}}</p><span class="benefit-detail">{{benefits.speakersDetail}}</span></article>
@@ -158,6 +129,19 @@
             <li><span class="step-number">3</span><div><h3>{{setup.connectTitle}}</h3><p>{{setup.connectDescription}}</p></div></li>
           </ol>
         </div>
+      </section>
+
+      <section class="trust-notes wrap" id="privacy" aria-labelledby="privacy-title">
+        <div>
+          <h2 id="privacy-title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>{{common.local}}</h2>
+          <p>{{privacy.description}}</p>
+          <p class="privacy-scope">{{privacy.scope}}</p>
+        </div>
+        <section id="source" aria-labelledby="source-title">
+          <h2 id="source-title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-code"/></svg>{{source.title}}</h2>
+          <p>{{source.description}}</p>
+          <a class="source-link" href="https://github.com/OpenKrisp/OpenKrisp">{{common.explore}}<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </section>
       </section>
 
       <section class="download-section wrap" id="download" aria-labelledby="download-title">
@@ -183,7 +167,7 @@
       </section>
     </main>
 
-    <footer class="site-footer wrap"><div><a class="wordmark" href="#" aria-label="{{nav.home}}"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>OpenKrisp</a><p>{{footer.tagline}}</p></div><nav aria-label="{{footer.nav}}"><a href="https://github.com/OpenKrisp/OpenKrisp">GitHub</a><a href="https://github.com/OpenKrisp/OpenKrisp/releases">{{footer.releases}}</a><a href="https://github.com/OpenKrisp/OpenKrisp/blob/main/LICENSE">{{footer.license}}</a></nav></footer>
+    <footer class="site-footer wrap"><div><a class="wordmark" href="#" aria-label="{{nav.home}}"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>OpenKrisp</a><p>{{footer.tagline}}</p></div><nav aria-label="{{footer.nav}}"><a href="https://github.com/OpenKrisp/OpenKrisp">GitHub</a><a href="https://github.com/OpenKrisp/OpenKrisp/releases">{{footer.releases}}</a><a href="https://github.com/OpenKrisp/OpenKrisp/blob/main/LICENSE">{{footer.license}}</a><a href="#privacy">{{nav.privacy}}</a></nav></footer>
 
     <dialog id="help-dialog" aria-labelledby="help-dialog-title"><div class="dialog-heading"><h2 id="help-dialog-title">{{help.title}}</h2><button class="quiet-button" id="close-help" aria-label="{{help.close}}"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"/></svg></button></div><p>{{help.controls}}</p><p>{{help.privacy}}</p><a class="button button-primary" href="#download" id="help-download">{{help.download}}<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg></a></dialog>
   </body>
