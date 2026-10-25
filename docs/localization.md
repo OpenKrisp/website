@@ -4,6 +4,12 @@ Translate the visitor’s intent, then read each page as a whole. Headlines may 
 different wording and sentence structure in each language. A sentence can be
 grammatically correct and still sound like a translation.
 
+Write the privacy headline as original copy in each language. Avoid turning the
+idea of privacy built into the product into a vague time reference such as
+“desde el principio.” The headline should express the visitor’s benefit in
+familiar language. In the preview footer, state the concrete fact that noise
+reduction runs on the visitor’s device instead of repeating a privacy slogan.
+
 | Language | Voice and terminology |
 | --- | --- |
 | English | Conversational, concise product English. Explain audio routing with familiar words before using technical labels. |
