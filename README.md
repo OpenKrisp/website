@@ -53,7 +53,7 @@ Brand colors: forest `#08110f`, surface `#0f1f1b`, text `#effcf8`, muted `#a8bbb
 
 Shared typography tokens in `styles.css` define 12px metadata, 14px controls and supporting text, 16px body copy, 20px component titles, and a 24px subsection title. Hero and section headings scale fluidly with the viewport. Keep components on this scale and adapt their layout instead of shrinking labels on mobile; line-height tokens preserve the same reading rhythm throughout.
 
-The page leads with privacy and an interactive recreation of the real two-panel desktop app. A dedicated section shows the boundary of local noise reduction and highlights that current app source is fully open source under GNU GPLv3 only, with repository and license links. Supporting sections explain independent audio paths, connection steps, and beta requirements. Mobile stacks the two panels without shrinking their controls. Keyboard focus, native disclosure elements, a modal help dialog, and reduced-motion preferences are supported.
+The page leads with noise reduction and an interactive recreation of the real two-panel desktop app. On wide screens, the benefit headline and download action sit beside the app preview. Supporting sections explain the microphone and received-audio paths, independent controls, connection steps, and beta requirements. Local processing and open-source details appear as compact notes after setup, with privacy also linked from the footer. Tablet layouts stack the hero copy above the two-panel preview; mobile stacks the panels without shrinking their controls. Keyboard focus, native disclosure elements, a modal help dialog, and reduced-motion preferences are supported.
 
 ## Languages
 
@@ -63,8 +63,8 @@ messages are centralized in `locales/<code>.json`; `en.json` defines the keys an
 provides the fallback for missing or blank translations. Brand names, package
 extensions, and the exact audio device names **OpenKrisp Microphone** and
 **OpenKrisp Speaker** stay unchanged. Illustrations have empty alt text because
-adjacent translated audio-flow labels convey their meaning; the preview and
-privacy diagram have translated accessible descriptions.
+adjacent translated audio-flow labels convey their meaning; the preview has a
+translated accessible description.
 
 See [the language and tone guide](docs/localization.md) for regional wording,
 editorial review criteria, and the distinction between technical validation and
